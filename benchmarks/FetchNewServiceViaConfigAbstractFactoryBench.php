@@ -24,6 +24,7 @@ class FetchNewServiceViaConfigAbstractFactoryBench
      * @var ServiceManager
      */
     private $sm;
+    private $smCached;
 
     public function __construct()
     {
@@ -44,7 +45,6 @@ class FetchNewServiceViaConfigAbstractFactoryBench
             'abstract_factories' => [
                 ConfigAbstractFactory::class,
             ],
-            'cache_abstract_factories_on_startup' => true,
         ]);
     }
 
